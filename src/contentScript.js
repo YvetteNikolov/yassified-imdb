@@ -1,43 +1,44 @@
 'use strict';
 
-// Content script file will run in the context of web page.
-// With content script you can manipulate the web pages using
-// Document Object Model (DOM).
-// You can also pass information to the parent extension.
+/**
+ * Internal dependencies
+ */
+// import fetchFemaleRating from "./api";
 
-// We execute this script by making an entry in manifest.json file
-// under `content_scripts` property
+const contentScript = () => {
+  const ratingButton = document.querySelector('.rating-bar__base-button .ipc-button');
 
-// For more information on Content Scripts,
-// See https://developer.chrome.com/extensions/content_scripts
+  const events = () => {
+    // Test
+    const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
+    console.log(
+      `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
+    );
 
-// Log `title` of current active web page
-const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
-console.log(
-  `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
-);
+    // First, check if the current page is a page of IMDb
+    if (!ratingButton) return;
 
-// Communicate with background file by sending a message
-chrome.runtime.sendMessage(
-  {
-    type: 'GREETINGS',
-    payload: {
-      message: 'Hello, my name is Con. I am from ContentScript.',
-    },
-  },
-  (response) => {
-    console.log(response.message);
+    // Get the rating span
+    const rating = ratingButton.querySelector('[data-testid="hero-rating-bar__aggregate-rating__score"] span');
+
+    if (!rating) return;
+
+    const ratingValue = rating.innerText;
+
+    // Get the ID from the movie, after the slash https://www.imdb.com/title/tt0111161/
+    const id = window.location.pathname.split('/')[2];
+    console.log(id);
+
+    // Check if the id starts with tt
+    if (!id.startsWith('tt')) {
+      console.log('Not a movie page');
+    }
+
+    const femaleRating = getFemaleRating(id);
   }
-);
 
-// Listen for message
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.type === 'COUNT') {
-    console.log(`Current count is ${request.payload.count}`);
-  }
+  events();
+}
 
-  // Send an empty response
-  // See https://github.com/mozilla/webextension-polyfill/issues/130#issuecomment-531531890
-  sendResponse({});
-  return true;
-});
+contentScript();
+
