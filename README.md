@@ -1,8 +1,8 @@
 # 💕 yassified 💕 IMDb Chrome Extension
 
-Despite what many comment sections on the internet would have you believe, the gender split of people who use the internet is 50/50. However, this is not the case with people who rate films on IMDb. Most IMDb voters are male, which skews the rankings in favor of films that are aimed towards men.
+Despite what many comment sections on the internet would have you believe, the gender split of people who use the internet is 50/50. However, this is not the case with people who rate films on IMDb: most IMDb voters are male, which skews the rankings in favor of films that are aimed towards men.
 
-This extension removes the men from the rating equation, generating a fully feminized IMDb rating.
+This extension removes the men from the rating equation, showing a feminized IMDb rating.
 
 Work in progress.
 
