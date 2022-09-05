@@ -3,13 +3,12 @@
 /**
  * Internal dependencies
  */
-// import fetchFemaleRating from "./api";
+import fetchFemaleRating from "./api";
 
 const contentScript = () => {
   const ratingButton = document.querySelector('.rating-bar__base-button .ipc-button');
 
   const events = () => {
-    // Test
     const pageTitle = document.head.getElementsByTagName('title')[0].innerHTML;
     console.log(
       `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
@@ -34,7 +33,7 @@ const contentScript = () => {
       console.log('Not a movie page');
     }
 
-    const femaleRating = getFemaleRating(id);
+    fetchFemaleRating(id);
   }
 
   events();

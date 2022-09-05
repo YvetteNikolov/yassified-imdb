@@ -1,29 +1,32 @@
 /**
- * Get request to get API
+ * Get request to fetch the
  *
  * @param {int} id
- * @returns
+ * @returns {int}
  */
 const fetchFemaleRating = async (id) => {
   try {
     const response = await fetch('https://www.imdb.com/title/' + id + '/ratings/');
 
-    console.log(response);
-
     if (!response.ok) {
-      throw new Error('Error: could not fetch endpoint.');
+      console.log('Error: ' + response.status);
     }
 
-    // Get webpage
-    const data = await response.text();
+    const html = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const selector = '#main > section > div > div.allText > div > table:nth-child(11) > tbody > tr:nth-child(4) > td:nth-child(2) > div.bigcell'
 
-    console.log(data);
+    const ratingElement = doc.querySelector(selector);
 
-    return data;
+    if (!ratingElement) {
+      console.log("Could not find rating element");
+    }
+
+    return ratingElement.innerText;
 
   } catch (e) {
-    console.log("Er is iets misgegaan: ", e);
-    return false;
+    console.log("Something went wrong: ", e);
   }
 }
 
