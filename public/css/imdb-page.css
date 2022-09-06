@@ -1,0 +1,38 @@
+/* Override IMDb CSS */
+[data-testid='hero-rating-bar__aggregate-rating'] {
+  position: relative;
+}
+
+/* Yassified rating CSS */
+.yassified-rating {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: calc(100% + 1rem);
+  top: 1px;
+  padding: 0.5rem 0.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  width: 90px;
+  height: 66px;
+}
+
+.yassified-rating__small {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Icons */
+.yassified-icon__male,
+.yassified-icon__female {
+  width: 11px;
+  margin-right: 0.5rem;
+}
+
+.yassified-icon__male {
+  fill: darkturquoise;
+}
+
+.yassified-icon__female {
+  fill: hotpink;
+}
