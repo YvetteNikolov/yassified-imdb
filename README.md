@@ -1,31 +1,38 @@
-# 💕 yassified 💕 IMDb Chrome Extension
+# 💕 yassified 💕 IMDb ratings
 
-Despite what many comment sections on the internet would have you believe, the gender split of people who use the internet is 50/50. However, this is not the case with people who rate films on IMDb: most IMDb voters are male, which skews the rankings in favor of films that are aimed towards men.
+A simple Chrome extension showing the IMDb rating split between male and female.
 
-This extension makes it possible to instantly see the rating split between male en female.
+## Screenshot
 
-Work in progress.
+![Screenshot of IMDb title page](/screenshot.png?raw=true)
+
+## Install
+
+Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension]() in your Extensions manager.
 
 ## Background
 
-A lot of (academic) articles have been written about these skewed ratings. A quick Google search gives these articles:
+Despite what many comment sections on the internet would have you believe, the gender split of people who use the internet is 50/50. However, this is not the case with people who rate films on IMDb. Most IMDb voters are male, which skews the rankings in favor of films that are aimed towards men.
+
+A lot of (academic) articles have been written about skewed film ratings. A quick Google search:
 
 - ['Rotten Tomato and IMDb: film rankings skewed by mostly male voters'](https://www.thetimes.co.uk/article/rotten-tomato-and-imdb-film-rankings-skewed-by-mostly-male-voters-zznpfv20z)
 - ['IMDb analysed: how do men and women's favourite films differ?'](https://oneroomwithaview.com/2016/08/10/imdb-analysed-men-womens-favourite-films-differ/)
 - [‘Review bombing’ of shows and movies like ‘She-Hulk’ and ‘Turning Red’ is ruining the credibility of online ratings](https://www.thehindu.com/entertainment/review-bombing-of-shows-and-movies-like-she-hulk-and-turning-red-is-ruining-the-credibility-of-online-ratings/article65825293.ece)
 
-## To do
+Using this extension will create more awareness about the skewing of IMDb ratings.
 
-- Option to replace ratings with a rating geared to your age
+## Development
 
-## Install
-
-Unpack the [Chrome extension (TBA)]() in your Extensions manager.
+1. Clone this repo
+2. Go to [chrome://extensions](chrome://extensions)
+3. Enable developer mode
+4. Click on "Load unpacked" and select this project
 
 ## Contribution
 
 Suggestions and pull requests are welcomed.
 
----
+## License
 
-This project was bootstrapped with [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli)
+💕 yassified 💕 IMDb ratings is licensed under the MIT License.
