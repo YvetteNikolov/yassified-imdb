@@ -8,7 +8,7 @@ A simple Chrome extension showing the IMDb rating split between male and female.
 
 ## Install
 
-Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension]() in your Extensions manager.
+Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension](https://github.com/YvetteNikolov/yassified-imdb/raw/main/yassified-extension.zip) in your Extensions manager.
 
 ## Background
 
@@ -20,7 +20,7 @@ A lot of (academic) articles have been written about skewed film ratings. A quic
 - ['IMDb analysed: how do men and women's favourite films differ?'](https://oneroomwithaview.com/2016/08/10/imdb-analysed-men-womens-favourite-films-differ/)
 - [‘Review bombing’ of shows and movies like ‘She-Hulk’ and ‘Turning Red’ is ruining the credibility of online ratings](https://www.thehindu.com/entertainment/review-bombing-of-shows-and-movies-like-she-hulk-and-turning-red-is-ruining-the-credibility-of-online-ratings/article65825293.ece)
 
-Using this extension will create more awareness about the skewing of IMDb ratings.
+Using this extension will help to create more awareness.  
 
 ## Development
 
