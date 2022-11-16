@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "💕 yassified IMDb",
+  "name": "💕 yassified 💕 IMDb ratings",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "A simple extension showing the IMDb rating split between male and female.",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
@@ -13,24 +13,15 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "💕 yassified IMDb",
-    "default_popup": "popup.html"
+    "default_title": "💕 yassified IMDb"
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage"],
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "run_at": "document_idle",
-      "js": [
-        "contentScript.js"
-      ],
-      "css": [
-        "css/imdb-page.css"
-      ]
+      "js": ["contentScript.js"],
+      "css": ["css/imdb-page.css"]
     }
   ]
 }

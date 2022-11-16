@@ -15,6 +15,19 @@
   border-radius: 4px;
   width: 90px;
   height: 66px;
+  text-decoration: none;
+  transition: all 0.15s linear;
+}
+
+.yassified-rating:hover {
+  background-color: rgba(64, 64, 64, 1);
+}
+
+.yassified-rating__number {
+  color: #fff;
+  min-width: 24px;
+  text-align: center;
+  display: inline-block;
 }
 
 .yassified-rating__small {
@@ -27,6 +40,7 @@
 .yassified-icon__female {
   width: 11px;
   margin-right: 0.5rem;
+  color: #fff;
 }
 
 .yassified-icon__male {

@@ -1,33 +1,28 @@
 /**
- * Get request to fetch the
+ * Internal dependencies
+ */
+import { IMDB_TITLE_URL } from '../constants/urls';
+
+/**
+ * GET request to the ratings page of the item
  *
  * @param {int} id
- * @returns {int}
+ * @returns {string}
  */
-const fetchFemaleRating = async (id) => {
+const fetchIMDbRatingPage = async (id) => {
   try {
-    const response = await fetch('https://www.imdb.com/title/' + id + '/ratings/');
+    const response = await fetch(IMDB_TITLE_URL + id + '/ratings/');
 
     if (!response.ok) {
       console.log('Error: ' + response.status);
     }
 
     const html = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    const selector = '#main > section > div > div.allText > div > table:nth-child(11) > tbody > tr:nth-child(4) > td:nth-child(2) > div.bigcell'
 
-    const ratingElement = doc.querySelector(selector);
-
-    if (!ratingElement) {
-      console.log("Could not find rating element");
-    }
-
-    return ratingElement.innerText;
-
-  } catch (e) {
-    console.log("Something went wrong: ", e);
+    return html;
+  } catch (error) {
+    console.log(error);
   }
-}
+};
 
-export default fetchFemaleRating;
+export default fetchIMDbRatingPage;
