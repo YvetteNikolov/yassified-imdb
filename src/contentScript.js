@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import IMDbPage from './views/imdb-page';
+import IMDbTitlePage from './views/imdb-title-page';
 
 const app = () => {
-  IMDbPage();
+  IMDbTitlePage();
 };
 
 app();

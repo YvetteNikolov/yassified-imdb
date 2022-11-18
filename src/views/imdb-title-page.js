@@ -12,7 +12,7 @@ import { IMDB_TITLE_URL } from '../constants/urls';
 
 export default () => {
   const events = () => {
-    if (!isIMDbPage()) return;
+    if (!isIMDbTitlePage()) return;
 
     renderRatingPlaceholder();
     updateRating();
@@ -24,7 +24,7 @@ export default () => {
    *
    * @returns {boolean}
    */
-  const isIMDbPage = () => {
+  const isIMDbTitlePage = () => {
     const url = window.location.href;
     const id = window.location.pathname.split('/')[2];
 
@@ -51,14 +51,15 @@ export default () => {
     );
 
     if (!IMDbRatings) {
-      console.log('Could not find rating elements');
+      console.log('Yassified IMDb ratings: could not find IMDb rating elements');
       return;
     }
 
-    const IMDbRatingDesktop = IMDbRatings[0]; // There are two ratings. We want the first one. The second one is for mobile.
+    // There are two ratings. We want the first one. The second one is for mobile.
+    const IMDbRatingDesktop = IMDbRatings[0];
 
     if (!IMDbRatingDesktop) {
-      console.log('Could not find desktop rating element');
+      console.log('Yassified IMDb ratings: could not find IMDb desktop rating element');
       return;
     }
 
@@ -119,7 +120,10 @@ export default () => {
       `.yassified-rating__${gender} .yassified-rating__number`
     );
 
-    if (!yassifiedRating) return;
+    if (!yassifiedRating) {
+      console.log(`Yassified IMDb ratings: could not find yassified ${gender} rating to update`);
+      return;
+    }
 
     yassifiedRating.innerHTML = rating.replace(',', '.');
   };
