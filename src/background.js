@@ -1,5 +1,7 @@
 'use strict';
 
+// For now unused, might be in the future.
+
 // With background scripts you can communicate with popup
 // and contentScript files.
 // For more information on background script,
