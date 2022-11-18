@@ -8,7 +8,7 @@ A simple Chrome extension showing the IMDb rating split between male and female.
 
 ## Install
 
-Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension](https://github.com/YvetteNikolov/yassified-imdb/raw/main/yassified-extension.zip) in your Extensions manager.
+Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension (Download ZIP)](https://github.com/YvetteNikolov/yassified-imdb/raw/main/yassified-extension.zip) in your extensions manager.
 
 ## Background
 
@@ -19,15 +19,6 @@ A lot of (academic) articles have been written about skewed film ratings. A quic
 - ['Rotten Tomato and IMDb: film rankings skewed by mostly male voters'](https://www.thetimes.co.uk/article/rotten-tomato-and-imdb-film-rankings-skewed-by-mostly-male-voters-zznpfv20z)
 - ['IMDb analysed: how do men and women's favourite films differ?'](https://oneroomwithaview.com/2016/08/10/imdb-analysed-men-womens-favourite-films-differ/)
 - [‘Review bombing’ of shows and movies like ‘She-Hulk’ and ‘Turning Red’ is ruining the credibility of online ratings](https://www.thehindu.com/entertainment/review-bombing-of-shows-and-movies-like-she-hulk-and-turning-red-is-ruining-the-credibility-of-online-ratings/article65825293.ece)
-
-Using this extension will help to create more awareness.  
-
-## Development
-
-1. Clone this repo
-2. Go to [chrome://extensions](chrome://extensions)
-3. Enable developer mode
-4. Click on "Load unpacked" and select this project
 
 ## Contribution
 
