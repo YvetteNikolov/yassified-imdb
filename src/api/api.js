@@ -14,14 +14,14 @@ const fetchIMDbRatingPage = async (id) => {
     const response = await fetch(IMDB_TITLE_URL + id + '/ratings/');
 
     if (!response.ok) {
-      console.log('Error: ' + response.status);
+      console.log('Yassified IMDb ratings fetch error: ' + response.status);
     }
 
     const html = await response.text();
 
     return html;
   } catch (error) {
-    console.log(error);
+    console.log('Yassified IMDb ratings fetch error: ' + error);
   }
 };
 

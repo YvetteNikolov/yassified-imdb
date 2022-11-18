@@ -23,7 +23,7 @@ const getRatingFromDOM = (dom, selector) => {
   const ratingElement = dom.querySelector(selector);
 
   if (!ratingElement) {
-    console.log('Could not find rating element');
+    console.log('Yassified IMDb ratings: could not find rating element in DOM');
     return '';
   }
 
