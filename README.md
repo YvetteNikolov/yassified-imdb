@@ -2,13 +2,15 @@
 
 A simple Chrome extension showing the IMDb rating split between male and female.
 
+> __Update 23-03-2023__: IMDb no longer provides a demographic breakdown, rendering this plugin nonfunctional. [Additional details](https://community-imdb.sprinklr.com/conversations/imdbcom/imdb-user-ratings-page-redesign/64220f80ac2f711237475865).
+
 ## Screenshot
 
 ![Screenshot of IMDb title page](/screenshot.png?raw=true)
 
 ## Install
 
-Install the Chrome extension via the [Chrome Web Store (TBA)]() or unpack the [Chrome extension (Download ZIP)](https://github.com/YvetteNikolov/yassified-imdb/raw/main/yassified-extension.zip) in your extensions manager.
+Install the Chrome extension via the [Chrome Web Store (removed)]() or unpack the [Chrome extension (Download ZIP)](https://github.com/YvetteNikolov/yassified-imdb/raw/main/yassified-extension.zip) in your extensions manager.
 
 ## Background
 
